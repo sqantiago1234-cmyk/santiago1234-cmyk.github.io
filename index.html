@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartas para Tatiana 💌</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; text-align: center; padding: 40px; }
+        h1 { font-size: 32px; }
+        .btn {
+            font-size: 22px;
+            padding: 12px 25px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cartas para mi amor Tatiana 💗</h1>
+    <p>Presiona el botón para ver la carta del día 💞</p>
+    <button class="btn" onclick="generarCarta()">💗 Ver carta de hoy 💗</button>
+    <p id="carta" style="margin-top:30px; font-size:20px;"></p>
+
+    <script>
+        function generarCarta() {
+            const cartas = [
+                "Mi amor Tatiana, cada amanecer es más bonito porque tú existes en mi vida 💕.",
+                "Tatiana, eres el sueño que nunca quiero dejar de soñar 🌙✨.",
+                "Amarte es lo mejor que me ha pasado, gracias por existir mi cielo 💖.",
+                "Tu sonrisa ilumina mis días, Tatiana, eres mi felicidad eterna 🌞💘.",
+                "Tatiana, contigo todo es más bonito, incluso lo simple se vuelve mágico contigo ✨❤️."
+            ];
+            let index = new Date().getDate() % cartas.length;
+            document.getElementById('carta').innerText = cartas[index];
+        }
+    </script>
+</body>
+</html>
